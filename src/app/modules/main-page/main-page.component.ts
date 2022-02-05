@@ -22,4 +22,8 @@ export class MainPageComponent implements OnInit {
   selectFeature(id: number) {
     this.dataService.selectFeature(id)
   }
+
+  resetSelectedFeature() {
+    this.dataService.resetSelectedFeature()
+  }
 }

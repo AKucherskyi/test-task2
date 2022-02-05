@@ -17,5 +17,11 @@
     </table>
   </div>
 
-  <div class="selected-feature" *ngIf="selectedFeature$ | async; let selectedFeature">{{selectedFeature.ProductDescription}}</div>
+  <mat-card
+    class="selected-feature"
+    *ngIf="selectedFeature$ | async; let selectedFeature"
+  >
+  <button mat-icon-button class="close-btn" (click)="resetSelectedFeature()"><mat-icon >close</mat-icon></button>
+    
+  </mat-card>
 </div>

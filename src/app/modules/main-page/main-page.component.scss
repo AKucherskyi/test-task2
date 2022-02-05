@@ -39,10 +39,16 @@ table {
     border-radius: 100px;
 }
 
+
 .selected-feature {
-    height: 100%;
-    background-color: rgb(218, 218, 218);
     grid-area: selected;
+    position: relative;
+
+    .close-btn {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
 }
 
 @media screen and (max-width: 768px) {
