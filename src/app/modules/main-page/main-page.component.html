@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="all-features" *ngIf="features$ | async; let features">
+    <table mat-table [dataSource]="features">
+      <ng-container matColumnDef="ProductDescription">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td
+          mat-cell
+          *matCellDef="let element"
+          (click)="selectFeature(element.ProductId)"
+        >
+          {{ element.ProductDescription }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['ProductDescription']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['ProductDescription']"></tr>
+    </table>
+  </div>
+
+  <div class="selected-feature" *ngIf="selectedFeature$ | async; let selectedFeature">{{selectedFeature.ProductDescription}}</div>
+</div>
