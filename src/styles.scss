@@ -1,12 +1,17 @@
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-	margin: 0;
-	padding: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-	background-color: rgb(240, 240, 240);
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: rgb(240, 240, 240);
 }
 
+.mat-column-Value {
+  padding-left: 16px !important;
+}
 
-
+.mat-column-Key {
+  width: 150px;
+}
