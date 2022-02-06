@@ -1,5 +1,5 @@
 import { DataService } from './../../core/services/data.service';
-import { Feature } from './../../shared/interfaces';
+import { Feature, TableItem } from './../../shared/interfaces';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -12,7 +12,7 @@ import { takeUntil } from 'rxjs/operators';
 export class MainPageComponent implements OnInit, OnDestroy {
   features$!: Observable<Feature[]>;
   selectedFeature!: Feature | null;
-  selectedFeatureTableData: Object[] = [];
+  selectedFeatureTableData: Array<TableItem> = [];
   destroy$ = new Subject<void>();
 
   constructor(private dataService: DataService) {}

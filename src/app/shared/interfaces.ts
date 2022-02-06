@@ -10,3 +10,8 @@ RestrictedLands: any
 IsFsk: boolean
 IsOrdergruppeC: boolean
 }
+
+export interface TableItem {
+    key: string
+    value: any
+}
